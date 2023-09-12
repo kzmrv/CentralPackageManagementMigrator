@@ -67,12 +67,12 @@ namespace Tool
 
         public static bool operator ==(NuGetPackageInfo? left, NuGetPackageInfo? right)
         {
-            if (left == null && right == null)
+            if (left is null && right is null)
             {
                 return true;
             }
 
-            if (left == null || right == null)
+            if (left is null || right is null)
             {
                 return false;
             }
