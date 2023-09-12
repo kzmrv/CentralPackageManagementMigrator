@@ -114,7 +114,6 @@ namespace Tool
         {
             var projectPackageLookup = new Dictionary<FileInfo, Dictionary<string, NuGetPackageInfo>>();
             var latestPackage = new Dictionary<string, NuGetPackageInfo>();
-            bool packagesReferenceContainsNoVersion = false;
 
             foreach (var projectFile in allProjectFiles)
             {
@@ -150,8 +149,7 @@ namespace Tool
                     var packageVersion = packageReference.Attributes?["Version"]?.Value;
                     if (string.IsNullOrEmpty(packageVersion))
                     {
-                        Log.Logger.Warning("Detected null package version");
-                        packagesReferenceContainsNoVersion = true;
+                        Log.Logger.Warning("Project {FullName} contained PackageReferences without Version attributes, Central Package Versioning SDK or Central Package Management could be setup", projectFile.FullName);
                         continue;
                     }
 
@@ -178,7 +176,7 @@ namespace Tool
                         packageVersion = packageVersion.Replace(replaceVariable.Value, resolvedVariable);
                     }
 
-                    if (packageName == null || packageVersion == null)
+                    if (packageName == null)
                     {
                         Log.Logger.Warning("Null package name or version detected: {PackageReference}", packageReference);
                         continue;
@@ -210,13 +208,6 @@ namespace Tool
                         latestPackage.Add(packageName, packageInfo);
                         Log.Logger.Debug("Added new package {PackageName} as latest package with version {PackageVersion}", packageName, packageVersion);
                     }
-                }
-
-                if (packagesReferenceContainsNoVersion)
-                {
-                    Log.Logger.Warning("Project {FullName} contained PackageReferences without Version attributes, Central Package Versioning SDK or Central Package Management could be setup", projectFile.FullName);
-                    packagesReferenceContainsNoVersion = false;
-                    continue;
                 }
 
                 if (packagesInProject.Any())
