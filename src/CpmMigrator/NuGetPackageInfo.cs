@@ -1,6 +1,6 @@
 ﻿namespace CpmMigrator
 {
-    internal class NuGetPackageInfo : IComparable<NuGetPackageInfo>, IEquatable<NuGetPackageInfo>
+    public class NuGetPackageInfo : IComparable<NuGetPackageInfo>, IEquatable<NuGetPackageInfo>
     {
         public string Id { get; set; }
         public string Version { get; set; }

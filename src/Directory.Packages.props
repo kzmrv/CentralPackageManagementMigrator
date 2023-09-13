@@ -25,6 +25,11 @@
     <PackageVersion Include="Spectre.Console.Testing" Version="0.45.0" />
     <PackageVersion Include="Spectre.Console.Cli" Version="0.45.0" />
     <PackageVersion Include="Microsoft.VisualStudio.SlnGen" Version="9.3.1" PrivateAssets="all" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageVersion Include="NUnit" Version="3.13.3" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageVersion Include="NUnit.Analyzers" Version="3.3.0" />
+    <PackageVersion Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
   <ItemGroup Label="Global Package References, added to every project">

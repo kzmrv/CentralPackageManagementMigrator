@@ -4,7 +4,7 @@ using Spectre.Console.Cli;
 
 namespace CpmMigrator
 {
-    internal class LogSettings : CommandSettings
+    public class LogSettings : CommandSettings
     {
         [Description("Level of logging output.")]
         [CommandOption("-v|--verbosity")]
@@ -15,5 +15,5 @@ namespace CpmMigrator
         public string? LogFile { get; set; }
     }
 
-    internal enum LogLevel { Info, Debug, Warning }
+    public enum LogLevel { Info, Debug, Warning }
 }
