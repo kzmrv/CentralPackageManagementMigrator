@@ -230,7 +230,6 @@ namespace Tool
 
         private static void UpdateDirectoryPackagesProps(string directoryPackagesPropsPath, Dictionary<string, NuGetPackageInfo> latestPackageByName)
         {
-            // Update Directory.Packages.props
             var directoryPackagesPropsDocument = new XmlDocument();
             var editedDirectoryPackagesProps = false;
             Log.Logger.Debug("Reading XML {DirectoryPackagesPropsPath} file", directoryPackagesPropsPath);
@@ -268,7 +267,7 @@ namespace Tool
                         }
                         else
                         {
-                            Log.Logger.Debug("Package {Id} had correct targed version {Version}", packageInfo.Id, packageInfo.Version);
+                            Log.Logger.Debug("Package {Id} had correct target version {Version}", packageInfo.Id, packageInfo.Version);
                         }
                     }
                     else
@@ -292,7 +291,7 @@ namespace Tool
             }
             else
             {
-                Log.Logger.Information("{DirectoryPackagesPropsPath} file required no edits, conatained correct package information", directoryPackagesPropsPath);
+                Log.Logger.Information("{DirectoryPackagesPropsPath} file required no edits, contained correct package information", directoryPackagesPropsPath);
             }
         }
 
@@ -302,7 +301,7 @@ namespace Tool
             {
                 Log.Logger.Information("Editing {FullName} project file", projectWithPackages.Key.FullName);
 
-                var projectDoc = new XmlDocument();
+                var projectDoc = new XmlDocument {PreserveWhitespace = true };
                 Log.Logger.Debug("Reading XML file {FullName}", projectWithPackages.Key.FullName);
                 using (var fileStream = projectWithPackages.Key.OpenRead())
                 {
