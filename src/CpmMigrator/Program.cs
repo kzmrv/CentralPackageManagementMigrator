@@ -1,10 +1,9 @@
 using Serilog;
+
 using Spectre.Console;
 using Spectre.Console.Cli;
-using System;
-using System.Threading.Tasks;
 
-namespace Tool
+namespace CpmMigrator
 {
     public class Program
     {

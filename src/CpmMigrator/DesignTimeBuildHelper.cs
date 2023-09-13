@@ -1,17 +1,14 @@
-﻿using Buildalyzer.Environment;
-using Buildalyzer;
-using Microsoft.Build.Utilities;
-using Serilog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Buildalyzer;
+using Buildalyzer.Environment;
+
 using Microsoft.Build.Locator;
-using Microsoft.Build.Execution;
+
+using Serilog;
 using Serilog.Events;
 
-namespace Tool
+using Tool;
+
+namespace CpmMigrator
 {
     internal static class DesignTimeBuildHelper
     {

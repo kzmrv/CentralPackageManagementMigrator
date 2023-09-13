@@ -1,12 +1,11 @@
-﻿using Microsoft.Extensions.FileProviders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Tool
+using Microsoft.Extensions.FileProviders;
+
+using Tool;
+
+namespace CpmMigrator
 {
     internal static class AssetLoader
     {

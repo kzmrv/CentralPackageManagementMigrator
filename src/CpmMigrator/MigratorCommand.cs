@@ -1,12 +1,16 @@
-﻿using Buildalyzer;
-using Serilog;
-using Spectre.Console.Cli;
-
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-namespace Tool
+using Buildalyzer;
+
+using Serilog;
+
+using Spectre.Console.Cli;
+
+using Tool;
+
+namespace CpmMigrator
 {
     internal sealed class MigratorCommand : AsyncCommand<MigratorCommand.Settings>
     {

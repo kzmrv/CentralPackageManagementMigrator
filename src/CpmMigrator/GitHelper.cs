@@ -1,13 +1,8 @@
 ﻿using Serilog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tool
 {
-    internal class GitHelper
+    class GitHelper
     {
         public static string? LocateRepositoryRoot(string repoPath, bool enforceGit = false)
         {

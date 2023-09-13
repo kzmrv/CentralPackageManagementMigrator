@@ -1,13 +1,8 @@
-﻿using Serilog;
-using Spectre.Console.Cli;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
-namespace Tool
+using Spectre.Console.Cli;
+
+namespace CpmMigrator
 {
     internal class LogSettings : CommandSettings
     {
