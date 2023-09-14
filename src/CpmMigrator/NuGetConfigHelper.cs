@@ -4,7 +4,7 @@ using Serilog;
 
 namespace CpmMigrator
 {
-    internal static class NuGetConfigHelper
+    public static class NuGetConfigHelper
     {
         public static void AddPackageSourceIfMissing(string nugetConfigPath)
         {

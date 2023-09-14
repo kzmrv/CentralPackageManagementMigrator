@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpmMigrator", "CpmMigrator\CpmMigrator.csproj", "{451653AF-C9C3-4838-96AC-8052BAA3BC63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpmMigrator.Tests", "CpmMigrator.Tests\CpmMigrator.Tests.csproj", "{80E19A2E-8BE5-4BDC-A257-944DFD3E098D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CpmMigrator.Tests", "CpmMigrator.Tests\CpmMigrator.Tests.csproj", "{80E19A2E-8BE5-4BDC-A257-944DFD3E098D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpmMigrator.IntegrationTests", "CpmMigrator.IntegrationTests\CpmMigrator.IntegrationTests.csproj", "{A8F0BCB8-D516-4637-BED3-C08647369AFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{80E19A2E-8BE5-4BDC-A257-944DFD3E098D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80E19A2E-8BE5-4BDC-A257-944DFD3E098D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80E19A2E-8BE5-4BDC-A257-944DFD3E098D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F0BCB8-D516-4637-BED3-C08647369AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F0BCB8-D516-4637-BED3-C08647369AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F0BCB8-D516-4637-BED3-C08647369AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F0BCB8-D516-4637-BED3-C08647369AFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
