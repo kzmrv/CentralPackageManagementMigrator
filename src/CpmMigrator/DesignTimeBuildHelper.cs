@@ -26,7 +26,6 @@ namespace CpmMigrator
             var environmentOptions = new EnvironmentOptions()
             {
                 Restore = false,
-                Preference = EnvironmentPreference.Framework
             };
 
             var msbuildPath = TryGetMsbuildPathFromEnvironment();
@@ -46,9 +45,6 @@ namespace CpmMigrator
 
         private static string TryGetMsbuildPathFromEnvironment()
         {
-            var msbuildPossiblePaths = new List<string>();
-
-            //var visualStudioInstanceQueryOptions = new VisualStudioInstanceQueryOptions() { DiscoveryTypes = DiscoveryType.DeveloperConsole}
             var msbuildInstances = MSBuildLocator.QueryVisualStudioInstances();
 
             return msbuildInstances.First().MSBuildPath;
